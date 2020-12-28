@@ -1,21 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<form name="formpaiement" Id="formpaiement" action="https://testpayment.cmi.co.ma/fim/est3Dgate" method="post">
+
+ <input type="hidden" name="hashAlgorithm" value="ver3">
+ <input type="hidden" name="encoding" value="UTF-8">
+ <input type="hidden" name="TranType" value="PreAuth">
+ <input type="hidden" name="currency" value="504">
+ <input type="hidden" name="amount" value="1">
+ <input type="hidden" name="CallbackResponse" value="true">
+ <input type="hidden" name="BillToCountry" value="MA">
+ <input type="hidden" name="storetype" value="3D_PAY_HOSTING">
+ <input type="hidden" name="failUrl" value="https://testpayment.cmi.co.ma/fim/est3dteststoreutf8?pagelang=en">
+ <input type="hidden" name="callbackUrl" value="https://en9secmjqxodwew.m.pipedream.net">
+ <input type="hidden" name="clientid" value="600002246">
+ <input type="hidden" name="okUrl" value="http://cmiecom.dx.am/ok.php">
+ <input type="hidden" name="lang" value="en">
+
+ <input type="hidden" name="MERCHANTSAFE" value="MERCHANTSAFE" />
+ Token : <input type="Text" name="MERCHANTSAFEKEY" value="ABC123">
+ <input type="hidden" name="MERCHANTSAFEAUTHTYPE" value="3DPAYAUTH">
+ <input type="hidden" name="MERCHANTSAFEACQUIRER" value="60">
+ <input type="hidden" name="MERCHANTGROUPID" value="60029">
+ <input type="hidden" name="hash" [value]="hashCMI">
+
+
+ </form>
+
+<input type="submit" value="valider" onclick="document.formpaiement.submit()">
+
 
 <router-outlet></router-outlet>
