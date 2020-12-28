@@ -1,6 +1,8 @@
-# NgProj
+# CMI Angular Project, Tokenization (Not working DEMO, to debug)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+
+Please note that this is not an official project and it's solely used for debugging purposes.
 
 ## Development server
 
